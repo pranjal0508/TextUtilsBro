@@ -1,4 +1,8 @@
 textarea::placeholder {
     color: grey !important;
     opacity: 1;
-}   
+}
+
+.fixed-alert{
+    height: 45px;
+}

@@ -42,9 +42,9 @@ function App() {
         <Alert alert={alert} />
 
         <Routes>
-          <Route exact path="/index.html" element={<TextForm heading="Enter the 'text' to analyze" mode={mode} showAlert={showAlert} />}> </Route>
+          <Route exact path="/index.html" element={<TextForm heading="TextUtilsBro - Text Manipulation Tools" mode={mode} showAlert={showAlert} />}> </Route>
           <Route exact path="/TextUtilsBro/about" element={<About mode={mode} />}></Route>
-          <Route exact path="/TextUtilsBro/" element={<TextForm heading="Enter the 'text' to analyze" mode={mode} showAlert={showAlert} />}> </Route>
+          <Route exact path="/TextUtilsBro/" element={<TextForm heading="TextUtilsBro - Text Manipulation Tools" mode={mode} showAlert={showAlert} />}> </Route>
         </Routes>
       </Router>
     </>

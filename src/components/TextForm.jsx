@@ -71,14 +71,14 @@ function TextForm(props) {
                     <label htmlFor="myBox" className="form-label"></label>
                     <textarea className={`form-control bg-${props.mode === "light" ? "light" : "dark"} text-${props.mode === "light" ? "dark" : "light"}`} value={text} onChange={onChangeHandler} id="myBox" rows="8" placeholder='Enter Text Here'></textarea>
                 </div>
-                <button className="btn btn-primary me-1" onClick={upperCaseHandler}>Convert to UPPERCASE</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={lowerCaseHandler}>Convert to lowercase</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={reverseHandler}>Reverse Text</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={clearTextHandler}>Clear Text</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={speakHandler}>Speak</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={copyHandler}>Copy Text</button>
-                <button className="btn btn-primary mx-1 my-1" onClick={removeExtraSpacesHandler}>Remove Extra Spaces</button> <br />
-                <button className="btn btn-primary mx-1 my-1" onClick={replaceHandler}>Replace</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={upperCaseHandler} disabled={text.length === 0}>Convert to UPPERCASE</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={lowerCaseHandler} disabled={text.length === 0}>Convert to lowercase</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={reverseHandler} disabled={text.length === 0}>Reverse Text</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={clearTextHandler} disabled={text.length === 0}>Clear Text</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={speakHandler} disabled={text.length === 0}>Speak</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={copyHandler} disabled={text.length === 0}>Copy Text</button>
+                <button className="btn btn-primary mx-1 my-1" onClick={removeExtraSpacesHandler} disabled={text.length === 0}>Remove Extra Spaces</button> <br />
+                <button className="btn btn-primary mx-1 my-1" onClick={replaceHandler} disabled={text.length === 0}>Replace</button>
                 <input id='replaceParam1' className="mx-1" type="text" />
                 with
                 <input id='replaceParam2' className="mx-1" type="text" />
@@ -87,7 +87,7 @@ function TextForm(props) {
                     <p>{noOfWords} words and {text.length} letters</p>
                     <p>{noOfWords * 0.008} Minutes read (125 words per minute)</p>
                     <h2>Preview Text</h2>
-                    <p>{text.length > 0 ? text : "Enter some text to preview here"}</p>
+                    <p>{text.length > 0 ? text : "Nothing to preview here"}</p>
                 </div>
             </div>
         </>
