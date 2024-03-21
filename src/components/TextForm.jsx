@@ -47,9 +47,7 @@ function TextForm(props) {
 
     }
     const copyHandler = () => {
-        let textBox = document.querySelector("#myBox");
-        textBox.select();
-        navigator.clipboard.writeText(textBox.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Text Copied to Clipboard!!!", "success");
 
     }
